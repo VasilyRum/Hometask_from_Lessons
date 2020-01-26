@@ -1,9 +1,9 @@
 
 def getList():
-    print('Enter leght list')
+    print('Enter list length')
     l = int (input())
     r = [0] * l
-    print('VVedite cherez enter objects of list')
+    print('Enter objects of list')
     for x in range(0, l, 1):
         r[x] = input()
     return r
