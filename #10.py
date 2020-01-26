@@ -1,6 +1,6 @@
 
 def getList():
-    print('VVedite dlinny lista')
+    print('Enter leght list')
     l = int (input())
     r = [0] * l
     print('VVedite cherez enter objects of list')
