@@ -13,5 +13,5 @@ print('Enter second set')
 s_2 = getSet()
 print('Enter third set')
 s_3 = getSet()
-print(s_3.issubset(s_1) and s_3.issubset(s_2))
+print('Is third set a subset of the first and the second sets?', s_3.issubset(s_1) and s_3.issubset(s_2))
 
