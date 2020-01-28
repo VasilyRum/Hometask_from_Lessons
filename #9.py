@@ -14,4 +14,4 @@ for x in a:
     if x not in dup_items:
         uniq_items.append(x)
         dup_items.append(x)
-print(uniq_items)
+print("Unique list's objects ", uniq_items)
