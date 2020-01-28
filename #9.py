@@ -1,5 +1,13 @@
-a = [10,20,30,20,10,50,60,40,80,50,40]
-
+def getList():
+    print('VVedite dlinny lista')
+    l = int (input())
+    r = [0] * l
+    print('VVedite cherez enter objects of list')
+    for x in range(0, l, 1):
+        r[x] = input()
+    return r
+print("Enter list")
+a = getList()
 dup_items = []
 uniq_items = []
 for x in a:
