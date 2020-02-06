@@ -15,10 +15,7 @@ def check_r(url: str):
     """
 
     r = website_alive.make_request.make_r(url)
-    if r.status_code == 200:
-        return True
-    else:
-        return False
+    return r.status_code == 200
 
 
 if __name__ == "__main__":
