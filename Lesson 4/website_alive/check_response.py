@@ -2,19 +2,19 @@
 import website_alive.make_request
 
 
-def check_r(str):
+def check_r(url: str):
 
     """
     Checks whether the site is alive
 
     Args:
-        website (str): The first parameter.
+        url: The first parameter.
 
     Returns:
         object: The return value. True - Yes. False - site is dead
     """
 
-    r = website_alive.make_request.make_r(str)
+    r = website_alive.make_request.make_r(url)
     if r.status_code == 200:
         return True
     else:
