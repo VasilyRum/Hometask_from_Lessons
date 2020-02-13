@@ -14,6 +14,6 @@ def chain(*iterables):
             yield element
 
 
-A = chain(["one", "two"])
+A = chain(["")
 print(next(A))
 print(next(A))
