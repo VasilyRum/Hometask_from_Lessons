@@ -9,11 +9,9 @@ import time
 
 def work_time(func):
     """
-
+    decorator принимающий на себя функцию
     """
-    print("123")
     def wrap(*arg):
-        print("12")
         start_time = time.time()
         res = func(*arg)
         end_time = time.time()
@@ -32,17 +30,13 @@ def time_methods(*arguments):
     def class_decor(cls):
         """
         decorator принимающий на себя класс
-
         """
-        def wrap(self, *args, **kwargs):
-            A = cls(self, *args, **kwargs)
-            method_list = [f for f in dir(A)]
-            for i in arguments:
-                if i in method_list:
-                    print(getattr(A, i))
-                    work_time(getattr(A, i)) #не хочет выводить время работы
-            return A
-        return wrap
+        for i in arguments:
+            if hasattr(cls, i):
+                decorated = work_time(getattr(cls, i))
+                setattr(cls, i, decorated)
+        return cls
+
     return class_decor
 
 
